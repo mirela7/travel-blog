@@ -1,0 +1,19 @@
+<div>
+    <div class="gallery-container">
+        <button (click)="prevImage()">&#8249;</button>
+        <img [src]="trips.get(selectedTrip)[currentIndex].url" alt="trips.get(selectedTrip)[currentIndex].alt" />
+        <button (click)="nextImage()">&#8250;</button>
+    </div>
+    <h2 class="gallery-caption"> {{selectedTrip}}</h2>
+
+    <div class="grid-container">
+        <div 
+          class="grid-column" 
+          *ngFor="let tripName of trips.keys()" 
+          [class.selected]="tripName === selectedTrip"
+          (click)="selectTrip(tripName)">
+          <h3>{{ tripName }}</h3>
+          <img class="preview-image" [src]="trips.get(tripName)[0].url" alt="{{ tripName }} Preview"/>
+        </div>
+      </div>
+</div>

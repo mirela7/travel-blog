@@ -1,0 +1,19 @@
+/* src/app/navbar/navbar.component.css */
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    font-weight: bold;
+  }
+  
+  button.active-link {
+    background-color: var(--mat-sys-primary);  /* Pink color for active button */
+    color: white;  /* Change text color to white */
+    font-weight: bold;
+  }

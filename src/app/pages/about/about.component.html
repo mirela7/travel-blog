@@ -1,0 +1,41 @@
+<div class="about-container">
+    <h2>About Me</h2>
+    <p>
+      Hello, I'm [Your Name], a passionate traveler with a love for exploring new places and cultures. I started this travel blog to share my adventures, experiences, and tips with fellow travel enthusiasts. I believe that travel is a way to enrich your life and broaden your perspective, and I want to inspire others to embark on their own journeys.
+    </p>
+  
+    <h3>Contact Me</h3>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" class="form-control">
+        <div *ngIf="name.invalid && name.touched" class="error-message">
+          <div *ngIf="name.errors?.['required']">Name is required</div>
+          <div *ngIf="name.errors?.['minlength']">Name must be at least 3 characters long</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" class="form-control">
+        <div *ngIf="email.invalid && email.touched" class="error-message">
+          <div *ngIf="email.errors?.['required']">Email is required</div>
+          <div *ngIf="email.errors?.['email']">Please enter a valid email address</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" formControlName="message" class="form-control" (input)="onInput()" maxlength="500"></textarea>
+        <span #characterCounterSpan>Maximum 500 characters remaining.</span>
+        <div *ngIf="message.invalid && message.touched" class="error-message">
+          <div *ngIf="message.errors?.['required']">Message is required</div>
+          <div *ngIf="message.errors?.['minlength']">Message must be at least 10 characters long</div>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="contactForm.invalid" class="submit-button">Submit</button>
+      <p-button label="Check"></p-button>
+    </form>
+  </div>
+  

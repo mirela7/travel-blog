@@ -1,0 +1,24 @@
+<div class="home">
+    <section class="intro">
+      <h1>Welcome to My Travel Blog!</h1>
+      <p>
+        Hi, I'm [Your Name]! I’m passionate about exploring new places, embracing different cultures, and sharing my experiences. 
+        Whether it’s wandering through bustling city streets or relaxing on serene beaches, traveling is my way of connecting with the world.
+      </p>
+      <a routerLink="/about" class="mat-raised-button mat-primary">Learn More About Me</a>
+    </section>
+  
+    <section class="carousel">
+      <mat-tab-group animationDuration="500ms">
+        <mat-tab *ngFor="let photo of photos">
+          <ng-template mat-tab-label>
+            <span>{{ photo.caption }}</span>
+          </ng-template>
+          <div class="carousel-image">
+            <img [src]="photo.url" [alt]="photo.alt" />
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </section>
+  </div>
+  
