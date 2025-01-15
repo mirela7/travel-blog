@@ -14,17 +14,17 @@ export class PhotoService {
   
   private photos: Photo[] =  [
     {
-      url: 'https://imageio.forbes.com/specials-images/imageserve/6518920b4cb81fadd99954e8/Landscape-with-Halong-bay/960x0.jpg?format=jpg&width=960',
+      url: 'https://cdn.britannica.com/31/255531-050-B7E07090/eiffel-tower-paris-france-champ-de-mars-view.jpg',
       alt: 'Eiffel Tower, Paris',
       caption: 'Eiffel Tower - Paris, France',
     },
     {
-      url: 'https://via.placeholder.com/800x400?text=Great+Wall+of+China',
+      url: 'https://cdn.britannica.com/89/179589-138-3EE27C94/Overview-Great-Wall-of-China.jpg?w=800&h=450&c=crop',
       alt: 'Great Wall of China',
       caption: 'Great Wall of China - China',
     },
     {
-      url: 'https://via.placeholder.com/800x400?text=Bali+Beach',
+      url: 'https://media.cntraveller.com/photos/63eb5a36b515236831979f64/3:2/w_6015,h_4010,c_limit/GettyImages-1145042281.jpeg',
       alt: 'Bali Beach',
       caption: 'Bali Beach - Indonesia',
     },
